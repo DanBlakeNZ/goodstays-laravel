@@ -522,7 +522,6 @@ button {
 
 .header__nav-btn__line:after {
   width: 5px;
-  height: 5px;
   border-right: 5px inset rgba(255, 255, 255, 0);
   border-bottom: 5px solid;
   position: absolute;

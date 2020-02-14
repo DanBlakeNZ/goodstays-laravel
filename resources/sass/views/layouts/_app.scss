@@ -1,0 +1,200 @@
+.page-content-wrapper {
+    border: 1px solid pink;
+}
+
+.header {
+    width: 100%;
+    min-width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    color: $aqua;
+    transition: background 0.3s ease;
+}
+
+.header--light {
+    color: $white;
+}
+
+.header--scrolled {
+    background: hsla(0, 0%, 100%, 0.7);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, box-shadow 0.3s ease 0.3s;
+}
+
+.header--scrolled.header--light {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    transition: padding 0.3s ease;
+}
+
+//***** Header logo *****//
+.header__logo {
+    display: flex;
+    width: 50%;
+}
+
+.header__logo:after {
+    border-top: 64px solid $aqua;
+    border-right: 60px inset hsla(0, 0%, 100%, 0);
+    content: "";
+}
+
+.header__logo__wrap {
+    display: block;
+    height: 64px;
+    padding: 10px;
+    background: $aqua;
+    text-align: center;
+    transition-property: width height padding;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.header__logo__image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    height: 100%;
+}
+
+//***** Header Icon *****//
+.header__icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: normal;
+    display: flex;
+    align-self: center;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.header__icons__item:first-child {
+    margin-left: 0;
+}
+
+.header__icons__item {
+    margin: 0 5px;
+    position: relative;
+    line-height: 1;
+}
+
+.header__icons__icon {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+//***** Header Button *****//
+.header__nav-btn {
+    width: 60px;
+    padding: 0;
+    background: none;
+    border: none;
+    -webkit-transition: background 0.4s ease;
+    transition: background 0.4s ease;
+    color: inherit;
+}
+
+.header__nav-btn--active {
+    color: #fff;
+}
+
+.header__nav-btn__line {
+    display: block;
+    width: 36px;
+    margin-bottom: 4px;
+    margin: 0 auto 4px;
+    position: relative;
+}
+
+.header__nav-btn__line:before {
+    display: block;
+    width: calc(100% - 5px);
+    border-bottom: 5px solid;
+}
+
+.header__nav-btn__line:after {
+    width: 5px;
+    height: 5px;
+    border-right: 5px inset hsla(0, 0%, 100%, 0);
+    border-bottom: 5px solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transition: border 0.4s ease;
+    transition: border 0.4s ease;
+}
+
+.header__nav-btn--active .header__nav-btn__line:after,
+.header__nav-btn--active:hover .header__nav-btn__line:after {
+    border-right-color: inherit;
+}
+
+.header__nav-btn__line:after,
+.header__nav-btn__line:before {
+    content: "";
+}
+
+.header__nav-btn__line--first,
+.header__nav-btn__line--third {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.header__nav-btn__line--second {
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.header__nav-btn__line--third {
+    margin-bottom: 0;
+}
+
+.header__nav-btn--active .header__nav-btn__line--first {
+    -webkit-transform: rotate(45deg) translate(6px, 7px);
+    transform: rotate(45deg) translate(6px, 7px);
+}
+
+.header__nav-btn--active .header__nav-btn__line--second {
+    opacity: 0;
+}
+
+.header__nav-btn--active .header__nav-btn__line--third {
+    -webkit-transform: rotate(-45deg) translate(6px, -7px);
+    transform: rotate(-45deg) translate(6px, -7px);
+}
+
+.header__nav-btn__text {
+    display: block;
+    margin-top: 1em;
+    font-family: Trade Gothic LH;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.header__nav-btn__text:before {
+    content: "Menu";
+}
+
+.header__nav-btn--active .header__nav-btn__text:before {
+    content: "Close";
+}
+
+//***** MEDIA QUERIES *****//
+@media (min-width: $mobile-breakpoint) {
+    .header__logo__wrap {
+        padding: 15px;
+    }
+}

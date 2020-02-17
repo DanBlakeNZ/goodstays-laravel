@@ -404,6 +404,10 @@ a:visited {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -590,6 +594,47 @@ button {
 
 .header__nav-btn--active .header__nav-btn__text:before {
   content: "Close";
+}
+
+.nav {
+  width: 290px;
+  height: 100%;
+  padding-top: 68px;
+  background: rgba(5, 171, 203, 0.95);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  opacity: 0;
+  transform: translateX(100%);
+  transition-property: box-shadow, opacity, transform;
+  transition: 0.3s ease;
+}
+
+.nav--open {
+  box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.15);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav__link {
+  flex: 1;
+  display: block;
+  padding: 15px 0;
+  font-family: TradeGothicBold;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav__link--current,
+.nav__link--section,
+.nav__link:hover {
+  color: #572600;
 }
 
 @media (min-width: 380px) {

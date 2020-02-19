@@ -40,3 +40,17 @@
     </button>
   </div>
 </header>
+
+@section('header-scripts')
+  <script type="text/javascript">
+    var navButton = document.getElementById("header-nav-btn");
+    var navMenu = document.getElementById("nav-menu");
+
+    navButton.addEventListener("click", toggleMenuNav);
+
+    function toggleMenuNav (){
+      navButton.classList.toggle("header__nav-btn--active");
+      navMenu.classList.toggle("nav--open");
+    }
+  </script>
+@stop

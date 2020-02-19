@@ -417,10 +417,6 @@ button {
   }
 }
 
-.page-content-wrapper {
-  border: 1px solid pink;
-}
-
 .header {
   width: 100%;
   min-width: 320px;
@@ -494,14 +490,14 @@ button {
   margin-left: auto;
 }
 
-.header__icons__item:first-child {
-  margin-left: 0;
-}
-
 .header__icons__item {
   margin: 0 5px;
   position: relative;
   line-height: 1;
+}
+
+.header__icons__item:first-child {
+  margin-left: 0;
 }
 
 .header__icons__icon {
@@ -601,6 +597,58 @@ button {
   content: "Close";
 }
 
+@media (min-width: 380px) {
+  .header__logo__wrap {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 720px) {
+  .header__wrap {
+    padding: 10px;
+  }
+
+  .header__logo {
+    display: block;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__logo:after,
+  .header__logo:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+  }
+
+  .header__logo:before {
+    border-top: 98px solid #00aaca;
+    border-left: 90px inset rgba(255, 255, 255, 0);
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  .header__logo:after {
+    border-top: 98px solid #00aaca;
+    border-right: 90px inset rgba(255, 255, 255, 0);
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  .header__logo__wrap {
+    width: 196px;
+    height: 68px;
+    padding: 10px;
+  }
+
+  .header__icons {
+    margin: 0 auto 0 0;
+  }
+}
+
 .nav {
   width: 290px;
   height: 100%;
@@ -658,60 +706,14 @@ button {
   color: #572600;
 }
 
-@media (min-width: 380px) {
-  .header__logo__wrap {
-    padding: 15px;
-  }
-}
-
 @media (min-width: 720px) {
-  .header__wrap {
-    padding: 10px;
-  }
-
-  .header__logo {
-    display: block;
-    width: auto;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .header__logo:after,
-  .header__logo:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-  }
-
-  .header__logo:before {
-    border-top: 98px solid #00aaca;
-    border-left: 90px inset rgba(255, 255, 255, 0);
-    left: 0;
-    transform: translateX(-100%);
-  }
-
-  .header__logo:after {
-    border-top: 98px solid #00aaca;
-    border-right: 90px inset rgba(255, 255, 255, 0);
-    right: 0;
-    transform: translateX(100%);
-  }
-
-  .header__logo__wrap {
-    width: 196px;
-    height: 68px;
-    padding: 10px;
-  }
-
-  .header__icons {
-    margin: 0 auto 0 0;
-  }
-
   .nav {
     width: 450px;
   }
+}
+
+.page-content-wrapper {
+  border: 1px solid pink;
 }
 
 .container-wrapper {

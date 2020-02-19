@@ -10,6 +10,10 @@
 // Globals
 @import "global";
 
+// Views -> Components
+@import "views/components/header";
+@import "views/components/nav";
+
 // Views -> Layouts
 @import "views/layouts/app";
 

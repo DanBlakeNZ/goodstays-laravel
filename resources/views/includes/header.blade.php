@@ -1,4 +1,4 @@
-<header class="header header--light header--scrolled">
+<header class="header header--light">
   <div class="header__wrap">
     <!-- Header Logo -->
     <div class="header__logo">
@@ -42,7 +42,7 @@
 </header>
 
 @section('header-scripts')
-  <script type="text/javascript">
+<script type="text/javascript">
     var navButton = document.getElementById("header-nav-btn");
     var navMenu = document.getElementById("nav-menu");
 

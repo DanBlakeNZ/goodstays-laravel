@@ -393,6 +393,10 @@ template {
   outline: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 1.3rem;
@@ -400,7 +404,20 @@ body {
 
 a {
   color: inherit;
+}
+
+a:hover {
   text-decoration: none;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+ol,
+p,
+ul {
+  line-height: 1.75;
 }
 
 ul {
@@ -411,9 +428,19 @@ button {
   cursor: pointer;
 }
 
+.wrap--narrow {
+  max-width: 860px;
+}
+
 @media (min-width: 720px) {
   body {
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 890px) {
+  .wrap--narrow {
+    margin: 0 auto;
   }
 }
 
@@ -730,6 +757,47 @@ button {
   content: "";
   transition: opacity 0.3s ease;
   pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+}
+
+.hero--full .hero__content {
+  height: auto;
+  position: static;
+  padding-bottom: 25px;
+}
+
+.hero__content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  padding-top: 98px;
+  position: relative;
+}
+
+.hero__wrap {
+  max-width: 270px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__intro {
+  margin-bottom: 20px;
+}
+
+.hero__intro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero__intro p {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #fff;
 }
 
 .container-wrapper {

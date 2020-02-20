@@ -4,6 +4,9 @@
     box-sizing: border-box;
     outline: none;
 }
+html {
+    font-size: 62.5%;
+}
 
 body {
     font-family: "Roboto", Arial, sans-serif;
@@ -12,7 +15,19 @@ body {
 
 a {
     color: inherit;
-    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+ol,
+p,
+ul {
+    line-height: 1.75;
 }
 
 ul {
@@ -23,8 +38,18 @@ button {
     cursor: pointer;
 }
 
+.wrap--narrow {
+    max-width: 860px;
+}
+
 @media (min-width: $tablet-breakpoint) {
     body {
         font-size: 1.4rem;
+    }
+}
+
+@media (min-width: $tablet-breakpoint-2) {
+    .wrap--narrow {
+        margin: 0 auto;
     }
 }

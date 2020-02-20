@@ -16,4 +16,5 @@
 	</body>
 
 	@yield ('header-scripts')
+	@yield ('page-scripts')
 </html>

@@ -428,6 +428,14 @@ button {
   cursor: pointer;
 }
 
+form {
+  margin: 0;
+}
+
+input {
+  border: none;
+}
+
 .wrap--narrow {
   max-width: 860px;
 }
@@ -798,6 +806,43 @@ button {
   font-size: 1.4rem;
   text-align: center;
   color: #fff;
+}
+
+.flex-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-form__field {
+  width: 100%;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: flex-start;
+  color: #000000;
+  border: 1px solid #b3cbcf;
+}
+
+.flex-form__field input {
+  padding: 0 20px 0 0;
+  background: transparent;
+  font-size: 1.7rem;
+  height: 50px;
+  flex-grow: 1;
+}
+
+.flex-form__field-icon {
+  position: relative;
+  width: 50px;
+}
+
+.flex-form__field-icon i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  line-height: 1;
 }
 
 .container-wrapper {

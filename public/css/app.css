@@ -942,6 +942,10 @@ input::placeholder {
   }
 }
 
+.home-content-wrapper {
+  padding-top: 30px;
+}
+
 .container-wrapper {
   border: 1px solid green;
 }

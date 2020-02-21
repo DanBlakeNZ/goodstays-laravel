@@ -44,6 +44,9 @@ form {
 
 input {
     border: none;
+    &::placeholder {
+        color: inherit;
+    }
 }
 
 .wrap--narrow {

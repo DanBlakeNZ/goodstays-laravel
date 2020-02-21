@@ -6,24 +6,6 @@
     &:before {
         width: 100%;
         height: 200px;
-        background: -webkit-gradient(
-            linear,
-            left top,
-            left bottom,
-            from(rgba(38, 171, 208, 0.77)),
-            color-stop(37%, rgba(28, 129, 157, 0.45)),
-            color-stop(56%, rgba(18, 81, 99, 0.29)),
-            color-stop(78%, rgba(8, 32, 40, 0.12)),
-            to(transparent)
-        );
-        background: linear-gradient(
-            180deg,
-            rgba(38, 171, 208, 0.77) 0,
-            rgba(28, 129, 157, 0.45) 37%,
-            rgba(18, 81, 99, 0.29) 56%,
-            rgba(8, 32, 40, 0.12) 78%,
-            transparent
-        );
         position: absolute;
         top: 0;
         left: 0;
@@ -32,6 +14,14 @@
         content: "";
         transition: opacity 0.3s ease;
         pointer-events: none;
+        background: linear-gradient(
+            180deg,
+            rgba(38, 171, 208, 0.77) 0,
+            rgba(28, 129, 157, 0.45) 37%,
+            rgba(18, 81, 99, 0.29) 56%,
+            rgba(8, 32, 40, 0.12) 78%,
+            transparent
+        );
     }
 }
 
@@ -92,12 +82,17 @@
     color: $black;
     border: 1px solid $blue-gray;
 
-    & input {
+    & input,
+    & span {
         padding: 0 20px 0 0;
         background: transparent;
         font-size: 1.7rem;
         height: 50px;
         flex-grow: 1;
+    }
+
+    & span {
+        line-height: 48px;
     }
 }
 
@@ -112,5 +107,77 @@
         transform: translateY(-50%);
         font-size: 25px;
         line-height: 1;
+    }
+}
+
+.hero__form .flex-form__action {
+    width: auto;
+    margin: 0 auto;
+}
+
+.flex-form__action,
+.flex-form__action .btn {
+    width: 100%;
+}
+
+.flex-form__action .btn {
+    width: 100%;
+    display: inline-block;
+    height: 50px;
+    max-width: 100%;
+    padding: 0 20px;
+    background: $aqua;
+    border: none;
+    white-space: nowrap;
+
+    & span {
+        font-family: TradeGothicBold;
+        line-height: 50px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-overflow: ellipsis;
+        color: $white;
+        letter-spacing: 0.1em;
+        overflow: hidden;
+    }
+}
+
+.hero__media {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    & img {
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+.hero__media__items {
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 540px) {
+    .hero__wrap {
+        max-width: 420px;
+    }
+
+    .flex-form {
+        justify-content: space-between;
+    }
+
+    .flex-form__field {
+        max-width: calc(50% - 5px);
+
+        & input {
+            padding-left: 50px;
+        }
     }
 }

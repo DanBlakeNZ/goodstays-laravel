@@ -1,4 +1,4 @@
-<header class="header header--light">
+<header class="header header--light header--scrolled">
   <div class="header__wrap">
     <!-- Header Logo -->
     <div class="header__logo">

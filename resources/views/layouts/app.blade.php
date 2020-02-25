@@ -5,9 +5,9 @@
 
 	<body>
 		<div id="app">
-
-			@include('includes.header')
-			@include('includes.nav')
+			
+			{{-- @include('includes.header')
+			@include('includes.nav') --}}
 
 			<main class="page-content-wrapper">
 				@yield('content')

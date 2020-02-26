@@ -46,6 +46,15 @@
     }
 }
 
+.card__flag--orange {
+    background: $orange;
+
+    &:after {
+        border-top-color: $orange;
+        border-top: 40px solid $orange;
+    }
+}
+
 .card__flag-text {
     align-self: flex-end;
     padding-bottom: 12px;
@@ -93,4 +102,25 @@
     margin: 1em 0;
     font-size: 1.2rem;
     overflow-wrap: break-word;
+}
+
+.card__icons {
+    padding: 0;
+    list-style: none;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: $black;
+}
+
+.card__icons__icon {
+    margin-right: 20px;
+    font-weight: 500;
+    line-height: 25px;
+
+    & i {
+        margin-left: 8px;
+        font-size: 20px;
+    }
 }

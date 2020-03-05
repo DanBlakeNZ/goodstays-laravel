@@ -56,7 +56,7 @@
       </div>
 
       <div class="hero__media">
-        <div class="hero__media__items slick-slider">
+        <div class="hero__media__items slick-slider-hero">
 
           <div class="hero__media__item">
             <picture>
@@ -101,7 +101,7 @@
   </div>
 </div>
 
-@section('page-scripts')
+@section('hero-scripts')
   <script type="text/javascript">
       var minDate = new Date();
       var checkInPicker = new Pikaday({
@@ -118,7 +118,7 @@
 
       // Hero slider
       jQuery(document).ready(function($) {
-      $('.slick-slider').slick({
+      $('.slick-slider-hero').slick({
         dots: false,
         infinite: true,
         speed: 500,

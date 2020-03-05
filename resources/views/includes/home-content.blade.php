@@ -69,10 +69,10 @@
     </div>
   </div>
 
-  @section('page-scripts')
+  @section('home-content-scripts')
     <script type="text/javascript">
 
-        // Hero slider
+        // Cards slider
         jQuery(document).ready(function($) {
           $('.slick-slider-cards').slick({
             dots: true,

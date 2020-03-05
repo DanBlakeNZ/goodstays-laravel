@@ -1067,6 +1067,49 @@ input::placeholder {
   font-size: 20px;
 }
 
+.card_slider {
+  margin: 25px 0;
+  padding: 1px 0;
+  position: relative;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: normal;
+  margin-top: 25px;
+}
+
+.slick-dots li {
+  height: 15px;
+  margin: 0 7px;
+}
+
+.slick-dots button {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  background: none;
+  border: 2px solid #00aaca;
+  border-radius: 50%;
+  font-size: 0;
+  color: transparent;
+  vertical-align: top;
+}
+
+.slick-dots .slick-active button {
+  background: #00aaca;
+}
+
+@media (min-width: 540px) {
+  .card_slider {
+    padding: 1px 25%;
+  }
+}
+
 .container-wrapper {
   border: 1px solid green;
 }
